@@ -27,9 +27,11 @@ type service struct {
 	awsID        string
 	consulID     string
 	awsNamespace string
+	tags         []string
 }
 
 type node struct {
+	name       string
 	port       int
 	host       string
 	awsID      string
