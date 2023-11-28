@@ -339,6 +339,7 @@ func (a *aws) create(services map[string]service) int {
 				input.DnsConfig = &sd.DnsConfig{
 					DnsRecords: []sd.DnsRecord{
 						{TTL: &a.dnsTTL, Type: sd.RecordTypeSrv},
+						{TTL: &a.dnsTTL, Type: sd.RecordTypeA},
 					},
 				}
 			}
